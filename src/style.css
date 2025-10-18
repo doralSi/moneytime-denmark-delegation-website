@@ -888,12 +888,17 @@ footer {
     #about-section .section-content {
         flex-direction: column;
         gap: 2em;
-        text-align: justify;
+        text-align: center !important;
+        align-items: center;
+        justify-content: center;
     }
     
     #about-section .section-text {
-        font-size: 1.2em;
+        font-size: 1em;
         line-height: 1.2;
+        text-align: center !important;
+        margin: 0 auto;
+        padding: 0 1em;
     }
     
     #about-section .section-image {
