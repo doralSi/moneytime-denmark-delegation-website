@@ -1,0 +1,29 @@
+# מחולל קבצים והגדרות IDE
+.vscode/
+*.swp
+*.swo
+*~
+
+# קבצי מערכת הפעלה
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# קבצי זמניים
+*.tmp
+*.temp
+*.log
+
+# קבצי Node.js (למקרה שתוסיף בעתיד)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# קבצי build (למקרה שתוסיף בעתיד)
+dist/
+build/
