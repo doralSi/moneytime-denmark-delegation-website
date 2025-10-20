@@ -77,14 +77,21 @@
                     <div class="schedule-item">
                         <div class="time-activity">
                             <div class="time">08:30–09:00</div>
-                            <div class="activity">יציאה מהמלון ונסיעה ל־BLOXHUB</div>
+                            <div class="activity">יציאה מהמלון ונסיעה ל־<a href="#" class="speaker-link" onclick="openSpeakerPopup('bloxhub')">BLOXHUB</a></div>
                         </div>
                     </div>
                     
                     <div class="schedule-item">
                         <div class="time-activity">
                             <div class="time">09:00–11:00</div>
-                            <div class="activity">DAC – המרכז הדני לאדריכלות</div>
+                            <div class="activity">
+                                <div class="activity-header">
+                                    <strong>Danish Architecture Center (DAC) – המרכז הדני לאדריכלות</strong>
+                                </div>
+                                <div class="activity-content">
+                                    ביקור בתערוכה SO DANISH עם מנכ"ל המרכז <a href="#" class="speaker-link" onclick="openSpeakerPopup('kent-martinussen')">Kent Martinussen</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -197,19 +204,58 @@
         
         // מאגר נתונים על דוברים
         const speakersData = {
+            'kent-martinussen': {
+                name: 'Kent Martinussen',
+                title: 'מנכ"ל Danish Architecture Center (DAC)',
+                image: 'image/speakers/DAC.jpg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">Danish Architecture Center (DAC) – המרכז הדני לאדריכלות</h4>
+                        <p>ה־DAC הוא אחד הגופים המובילים בעולם לקידום אדריכלות חדשנית, עיצוב עירוני וחשיבה מערכתית על עתיד הערים. המרכז משמש חממה לחדשנות במרחב הבנוי וזירה בינלאומית למפגשים בין אדריכלים, יזמים, רשויות מקומיות ומקבלי החלטות.</p>
+                        <p>פעילותו מתמקדת בפיתוח פתרונות שמחברים בין קיימות, טכנולוגיה ואיכות חיים במרחב העירוני. המרכז מקדם תערוכות, מחקרים ותכניות חינוכיות שמטרתן לעצב עתיד עירוני המבוסס על אחריות סביבתית, שוויון חברתי ואמון בין אדם למרחב.</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">Kent Martinussen – מנכ"ל DAC</h4>
+                        <p>Kent Martinussen נחשב לאחד הקולות המשפיעים באירופה בתחומי האדריכלות והעירוניות. תחת הנהגתו, הפך המרכז לפלטפורמה בינלאומית לקידום פתרונות של עיר חכמה, תכנון מותאם אקלים וחדשנות חברתית.</p>
+                        <p>מרטינוסן מוביל שיתופי פעולה עם ערים, מוסדות וממשלות ברחבי העולם, ומניע תהליכים המשלבים חזון ארוך טווח עם פרקטיקות ישימות.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">תערוכה SO DANISH</h4>
+                        <p>במהלך הביקור נשתתף בתערוכה SO DANISH שמציגה את הייחודיות של העיצוב והאדריכלות הדנית ואת השפעתם על חיי היומיום והתרבות.</p>
+                        <p><a href="https://dac.dk/en/exhibitions/so-danish" target="_blank" style="color: #D1B194; text-decoration: underline;">קישור לתערוכה SO DANISH</a></p>
+                    </div>
+                `
+            },
+            'bloxhub': {
+                name: 'BLOXHUB',
+                title: 'קהילה לחיים עירוניים בני קיימא',
+                image: 'image/speakers/BLOXHUB.jpeg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">BLOXHUB – קהילה לחיים עירוניים בני קיימא</h4>
+                        <p>BLOXHUB הוא מרכז חדשנות קופנהגני המחבר בין אנשי תעשייה, חוקרים, יזמים ורשויות מקומיות לקידום פתרונות לעתיד עירוני בר־קיימא.</p>
+                        <p>המרכז פועל כמרחב עבודה, רשת מקצועית וחממה לשיתופי פעולה בינלאומיים בתחומי תכנון עירוני, בנייה ירוקה וחדשנות חברתית.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">משימה ותפקיד</h4>
+                        <p>BLOXHUB משמש כפלטפורמה לחיבור בין ידע, טכנולוגיה ויזמות לצורך פיתוח פתרונות חדשניים לאתגרי העיר המודרנית. המרכז מעודד שיתופי פעולה רב-תחומיים ומסייע בהפיכת רעיונות לפרויקטים מעשיים המשפיעים על איכות החיים העירונית.</p>
+                    </div>
+                `
+            },
             'carsten-beck': {
                 name: 'Carsten Beck',
                 title: 'מנהל המרכז לתכנון עתידני של קופנהגן',
                 image: 'image/speakers/Carsten Beck.jpg',
                 bio: `
                     <div style="margin-bottom: 15px;">
-                        <h4 style="color: #D1B194; margin-bottom: 8px;">Copenhagen Institute for Futures Studies – המכון הקופנהגני לחקר עתידים</h4>
-                        <p>CIFS הוא מכון מחקר עצמאי הפועל מאז 1969 ומוביל חשיבה מערכתית על מגמות עתידיות והשפעתן על מדיניות, תכנון וחדשנות.</p>
-                        <p>המכון עוסק בפיתוח כלים לתכנון ארוך טווח, ניתוח סיכונים והזדמנויות, ויצירת שפה משותפת בין מגזרים סביב עתיד בר-קיימא.</p>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">המרכז לתכנון עתידני – Copenhagen Institute for Futures Studies</h4>
+                        <p>CIFS הוא מרכז מחקר עצמאי הפועל מאז 1969 ומוביל חשיבה מערכתית על מגמות עתידיות והשפעתן על מדיניות, תכנון וחדשנות.</p>
+                        <p>המרכז עוסק בפיתוח כלים לתכנון ארוך טווח, ניתוח סיכונים והזדמנויות, ויצירת שפה משותפת בין מגזרים סביב עתיד בר-קיימא.</p>
                     </div>
                     <div>
                         <h4 style="color: #D1B194; margin-bottom: 8px;">Carsten Beck</h4>
-                        <p>Carsten Beck, מנהל תחום חקר עתידים ויחסים ציבוריים במכון, עוסק בזיהוי מגמות כלכליות, חברתיות וטכנולוגיות ובהפיכתן לתובנות פעולה עבור ממשלות, ערים וארגונים.</p>
+                        <p>Carsten Beck, מנהל תחום חקר עתידים ויחסים ציבוריים במרכז, עוסק בזיהוי מגמות כלכליות, חברתיות וטכנולוגיות ובהפיכתן לתובנות פעולה עבור ממשלות, ערים וארגונים.</p>
+                        <p><a href="https://www.cifs.dk/" target="_blank" style="color: #D1B194; text-decoration: underline;">אתר המרכז לתכנון עתידני</a></p>
                     </div>
                 `
             },
