@@ -86,10 +86,11 @@
                             <div class="time">09:00–11:00</div>
                             <div class="activity">
                                 <div class="activity-header">
-                                    <strong>Danish Architecture Center (DAC) – המרכז הדני לאדריכלות</strong>
+                                    <strong><a href="#" class="speaker-link" onclick="openSpeakerPopup('dac')"></a>Danish Architecture Center (DAC) – המרכז הדני לאדריכלות</a></strong>
                                 </div>
                                 <div class="activity-content">
-                                    ביקור בתערוכה SO DANISH עם מנכ"ל המרכז <a href="#" class="speaker-link" onclick="openSpeakerPopup('kent-martinussen')">Kent Martinussen</a>
+                                    תיחה וביקור בתערוכה SO DANISH עם CEO <a href="#" class="speaker-link" onclick="openSpeakerPopup('kent-martinussen')">Kent Martinussen</a> של DAC<br>
+                                    מבוא לתפיסת המנהיגות אורבנית אסטרטגית של ה-DAC עם Senior Project Manager <a href="#" class="speaker-link" onclick="openSpeakerPopup('bjarne-jensen')">Bjarne E. Jensen</a>
                                 </div>
                             </div>
                         </div>
@@ -204,10 +205,27 @@
         
         // מאגר נתונים על דוברים
         const speakersData = {
+            'dac': {
+                name: 'Danish Architecture Center (DAC)',
+                title: 'המרכז הדני לאדריכלות',
+                image: 'image/speakers/DAC.jpg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">Danish Architecture Center (DAC) – המרכז הדני לאדריכלות</h4>
+                        <p>ה־DAC הוא אחד הגופים המובילים בעולם לקידום אדריכלות חדשנית, עיצוב עירוני וחשיבה מערכתית על עתיד הערים. המרכז משמש חממה לחדשנות במרחב הבנוי וזירה בינלאומית למפגשים בין אדריכלים, יזמים, רשויות מקומיות ומקבלי החלטות.</p>
+                        <p>פעילותו מתמקדת בפיתוח פתרונות שמחברים בין קיימות, טכנולוגיה ואיכות חיים במרחב העירוני. המרכז מקדם תערוכות, מחקרים ותכניות חינוכיות שמטרתן לעצב עתיד עירוני המבוסס על אחריות סביבתית, שוויון חברתי ואמון בין אדם למרחב.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">תערוכה SO DANISH</h4>
+                        <p>במהלך הביקור נשתתף בתערוכה SO DANISH שמציגה את הייחודיות של העיצוב והאדריכלות הדנית ואת השפעתם על חיי היומיום והתרבות.</p>
+                        <p><a href="https://dac.dk/en/exhibitions/so-danish" target="_blank" style="color: #D1B194; text-decoration: underline;">קישור לתערוכה SO DANISH</a></p>
+                    </div>
+                `
+            },
             'kent-martinussen': {
                 name: 'Kent Martinussen',
                 title: 'מנכ"ל Danish Architecture Center (DAC)',
-                image: 'image/speakers/DAC.jpg',
+                image: 'image/speakers/Kent Martinussen.jpeg',
                 bio: `
                     <div style="margin-bottom: 15px;">
                         <h4 style="color: #D1B194; margin-bottom: 8px;">Danish Architecture Center (DAC) – המרכז הדני לאדריכלות</h4>
@@ -223,6 +241,21 @@
                         <h4 style="color: #D1B194; margin-bottom: 8px;">תערוכה SO DANISH</h4>
                         <p>במהלך הביקור נשתתף בתערוכה SO DANISH שמציגה את הייחודיות של העיצוב והאדריכלות הדנית ואת השפעתם על חיי היומיום והתרבות.</p>
                         <p><a href="https://dac.dk/en/exhibitions/so-danish" target="_blank" style="color: #D1B194; text-decoration: underline;">קישור לתערוכה SO DANISH</a></p>
+                    </div>
+                `
+            },
+            'bjarne-jensen': {
+                name: 'Bjarne E. Jensen',
+                title: 'Senior Project Manager ב-DAC',
+                image: 'image/speakers/Bjarne E. Jensen.jpeg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">Bjarne E. Jensen – Senior Project Manager ב-DAC</h4>
+                        <p>Bjarne E. Jensen, מנהל פרויקטים בכיר ב־DAC, יציג למשתתפים את תפיסת המנהיגות האורבנית האסטרטגית של המרכז – גישה הרואה באדריכלות ובתכנון העירוני מנוע לבניית אמון, זהות ושגשוג קהילתי.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">תפיסת המנהיגות האורבנית</h4>
+                        <p>תחת הנחייתו של Jensen, המשתתפים יכירו את הגישה האסטרטגית של DAC לפיתוח עירוני המבוססת על שותפויות, חדשנות וחזון ארוך טווח. הגישה מדגישה כיצד תכנון נכון יכול לחזק את הקשר בין אזרחים למרחב ולבנות אמון קהילתי.</p>
                     </div>
                 `
             },
