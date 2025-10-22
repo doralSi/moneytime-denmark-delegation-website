@@ -10,7 +10,7 @@
     <header>
         <div class="nav-container">
             <div class="delegation-logo">
-                <img src="image/מאני טיים- לוגו.png" alt="לוגו מאני טיים" />
+                <img src="image/מאני טיים- לוגו-דנמרק.png" alt="לוגו מאני טיים" />
             </div>
             <!-- כפתור המבורגר למובייל -->
             <button class="mobile-menu-toggle">
@@ -24,7 +24,7 @@
                     <li><a href="schedule.html">לו"ז משלחת</a></li>
                     <li><a href="learning.html">למידה מקדימה</a></li>
                     <li><a href="technical.html">מידע טכני</a></li>
-                    <li><a href="recommendations.html">מפה</a></li>
+                    <li><a href="https://maps.app.goo.gl/AtLYjJLgz78jfv8p7" target="_blank">מפה</a></li>
                 </ul>
             </nav>
         </div>
@@ -393,8 +393,24 @@
             } catch (error) {
                 console.error('Error loading weather:', error);
                 weatherContent.innerHTML = `
-                    <div class="weather-loading">לא ניתן לטעון נתוני מזג אוויר</div>
+                    <div class="weather-offline">
+                        <div class="weather-temp">7°C</div>
+                        <div class="weather-description">מזג אוויר אופייני לנובמבר</div>
+                        <div class="weather-details">
+                            <div class="weather-detail">
+                                <i class="fas fa-tint"></i>
+                                <span>80% לחות</span>
+                            </div>
+                            <div class="weather-detail">
+                                <i class="fas fa-wind"></i>
+                                <span>12 קמ"ש רוח</span>
+                            </div>
+                        </div>
+                        <div class="weather-note">*נתונים אופליין - מזג אוויר טיפוסי לקופנהגן בנובמבר</div>
+                    </div>
                 `;
+                const weatherIcon = weatherWidget.querySelector('.weather-icon');
+                weatherIcon.className = 'fas fa-cloud weather-icon';
                 weatherWidget.classList.add('weather-error');
             }
         }

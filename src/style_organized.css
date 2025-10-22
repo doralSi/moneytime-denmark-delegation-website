@@ -1,8 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Almoni Tzar';
+    src: url('../webfont_files/almoni-tzar-regular-aaa.woff2') format('woff2'),
+         url('../webfont_files/almoni-tzar-regular-aaa.woff') format('woff'),
+         url('../webfont_files/almoni-tzar-regular-aaa.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Almoni Tzar';
+    src: url('../webfont_files/almoni-tzar-light-aaa.woff2') format('woff2'),
+         url('../webfont_files/almoni-tzar-light-aaa.woff') format('woff'),
+         url('../webfont_files/almoni-tzar-light-aaa.eot') format('embedded-opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Almoni Tzar';
+    src: url('../webfont_files/almoni-tzar-medium-aaa.woff2') format('woff2'),
+         url('../webfont_files/almoni-tzar-medium-aaa.woff') format('woff'),
+         url('../webfont_files/almoni-tzar-medium-aaa.eot') format('embedded-opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Almoni Tzar';
+    src: url('../webfont_files/almoni-tzar-bold-aaa.woff2') format('woff2'),
+         url('../webfont_files/almoni-tzar-bold-aaa.woff') format('woff'),
+         url('../webfont_files/almoni-tzar-bold-aaa.eot') format('embedded-opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 /* ===== עיצוב כללי ===== */
 body {
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     background: #f7fafd;
     margin: 0;
     direction: rtl;
@@ -208,7 +246,7 @@ nav a:hover {
     font-size: 2.2em;
     color: #154a7d;
     margin-bottom: 0.7em;
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -216,7 +254,7 @@ nav a:hover {
     font-size: 1.2em;
     color: #1a2a3a;
     margin-bottom: 1.2em;
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     font-weight: 400;
 }
 
@@ -227,7 +265,7 @@ nav a:hover {
     background: #fff;
     border-radius: 10px;
     padding: 2em 1em;
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     font-weight: 500;
     box-shadow: 0 2px 8px rgba(44,62,80,0.06);
     margin: 0 auto;
@@ -241,7 +279,7 @@ nav a:hover {
     background: #2980b9;
     color: #fff;
     font-size: 1.1em;
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     padding: 0.7em 2em;
     border-radius: 6px;
     text-decoration: none;

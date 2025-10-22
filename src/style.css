@@ -1,5 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@font-face {
+    font-family: 'Almoni Tzar';
+    src: url('../webfont_files/almoni-tzar-regular-aaa.woff2') format('woff2'),
+         url('../webfont_files/almoni-tzar-regular-aaa.woff') format('woff'),
+         url('../webfont_files/almoni-tzar-regular-aaa.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Almoni Tzar';
+    src: url('../webfont_files/almoni-tzar-light-aaa.woff2') format('woff2'),
+         url('../webfont_files/almoni-tzar-light-aaa.woff') format('woff'),
+         url('../webfont_files/almoni-tzar-light-aaa.eot') format('embedded-opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Almoni Tzar';
+    src: url('../webfont_files/almoni-tzar-medium-aaa.woff2') format('woff2'),
+         url('../webfont_files/almoni-tzar-medium-aaa.woff') format('woff'),
+         url('../webfont_files/almoni-tzar-medium-aaa.eot') format('embedded-opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Almoni Tzar';
+    src: url('../webfont_files/almoni-tzar-bold-aaa.woff2') format('woff2'),
+         url('../webfont_files/almoni-tzar-bold-aaa.woff') format('woff'),
+         url('../webfont_files/almoni-tzar-bold-aaa.eot') format('embedded-opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 /* ===== עיצוב כללי ===== */
 * {
@@ -15,7 +52,7 @@ html, body {
 }
 
 body {
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     background: #4A8A93; /* צבע ברירת מחדל ללוח זמנים - כחול-ירוק בהיר */
     direction: rtl;
     color: #1a2a3a;
@@ -307,12 +344,12 @@ header {
 }
 
 .section-title {
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     margin-bottom: 1em;
 }
 
 .section-text {
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     margin-bottom: 1.5em;
     line-height: 1.6;
 }
@@ -320,7 +357,7 @@ header {
 .section-link {
     display: inline-block;
     text-decoration: none;
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     font-weight: 700;
     padding: 0.8em 2.2em;
     border-radius: 6px;
@@ -508,7 +545,7 @@ header {
     justify-content: center;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     transition: all 0.3s;
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     flex-shrink: 0;
 }
 
@@ -568,7 +605,7 @@ header {
     justify-content: center;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     transition: all 0.3s;
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     flex-shrink: 0;
 }
 
@@ -665,7 +702,7 @@ header {
     justify-content: center;
     box-shadow: 0 4px 16px rgba(0,0,0,0.3);
     transition: all 0.3s;
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Almoni Tzar', 'Heebo', Arial, sans-serif;
     flex-shrink: 0;
 }
 
@@ -2059,5 +2096,126 @@ footer {
     .privacy-content {
         padding: 1.5em;
         margin-top: 1em;
+    }
+}
+
+/* ===== עיצוב מזג אוויר אופליין ===== */
+.weather-offline {
+    text-align: center;
+}
+
+.weather-note {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.weather-error .weather-note {
+    color: #888;
+}
+
+/* ===== עיצוב עמוד המפה החדש ===== */
+.map-redirect-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 110px);
+    padding: 2em;
+    background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+}
+
+.map-redirect-content {
+    background: white;
+    border-radius: 15px;
+    padding: 3em;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.map-title {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.map-description {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    line-height: 1.6;
+}
+
+.map-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin-bottom: 2.5em;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: #2c3e50;
+    font-size: 1em;
+}
+
+.feature-item i {
+    color: #3498db;
+    font-size: 1.2em;
+    width: 20px;
+}
+
+.map-open-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    color: white;
+    padding: 1em 2.5em;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+    margin-bottom: 1em;
+}
+
+.map-open-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+    background: linear-gradient(135deg, #229954 0%, #27ae60 100%);
+}
+
+.map-open-button i {
+    margin-left: 0.5em;
+}
+
+.map-note {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-top: 1em;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .map-redirect-content {
+        padding: 2em;
+        margin: 1em;
+    }
+    
+    .map-title {
+        font-size: 2em;
+    }
+    
+    .map-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-open-button {
+        font-size: 1.1em;
+        padding: 0.8em 2em;
     }
 }
