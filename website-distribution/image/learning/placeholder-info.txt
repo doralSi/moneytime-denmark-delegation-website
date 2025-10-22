@@ -1,0 +1,15 @@
+תמונות placeholder עבור חומרי הלמידה:
+
+1. devolution.jpg - ביזור לערים (KL מקומי דנמרק)
+2. reform.jpg - רפורמת השלטון המקומי
+3. trust.jpg - אמון נורדי
+4. decentralization.jpg - ביזור סמכויות ישראל
+5. knesset.jpg - דוח הכנסת
+6. regional.jpg - אזוריות בישראל
+7. port-development.jpg - פיתוח הנמל קופנהגן
+8. resilience.jpg - חוסן וחיות קופנהגן
+9. port-transformation.jpg - מהפך הנמל
+10. seven-cities.jpg - שבע ערים דניות
+11. vision-2025.jpg - חזון קופנהגן 2025
+
+כל התמונות צריכות להיות ברוחב קבוע של 400px לפחות ובגובה של 200px.

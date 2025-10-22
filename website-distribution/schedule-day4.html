@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לו"ז משלחת - יום רביעי</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body class="schedule-page" style="background-color: #E1C1A4;">
+    <header>
+        <div class="nav-container">
+            <div class="delegation-logo">
+                <img src="image/מאני טיים- לוגו-דנמרק.png" alt="לוגו מאני טיים" />
+            </div>
+            <!-- כפתור המבורגר למובייל -->
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">ראשי</a></li>
+                    <li><a href="schedule.html">לו"ז משלחת</a></li>
+                    <li><a href="learning.html">למידה מקדימה</a></li>
+                    <li><a href="technical.html">מידע טכני</a></li>
+                    <li><a href="https://maps.app.goo.gl/AtLYjJLgz78jfv8p7" target="_blank">מפה</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="schedule-container" style="background-color: #E1C1A4;">
+        <div class="schedule-card">
+            <!-- כותרת עם אייקון וניווט -->
+            <div class="schedule-header" style="background-color: #D1B194;">
+                <div class="nav-arrow nav-arrow-left" onclick="location.href='schedule-day3.html'">
+                    <span>‹</span>
+                </div>
+                <div class="schedule-title">
+                    <div class="schedule-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h2>יום רביעי | 5.11</h2>
+                </div>
+                <div class="nav-arrow nav-arrow-right" onclick="location.href='schedule-day5.html'">
+                    <span>›</span>
+                </div>
+            </div>
+            
+            <!-- תוכן לוח הזמנים -->
+            <div class="schedule-content">
+                <!-- נושא היום -->
+                <div class="day-topic">
+                    <h3>תשתיות לחדשנות ולעיצוב העתיד</h3>
+                </div>
+                
+                <!-- Weather Widget -->
+                <div class="weather-widget" id="weather-widget">
+                    <div class="weather-header">
+                        <i class="fas fa-cloud-sun weather-icon"></i>
+                        <h4 class="weather-title">מזג האוויר בקופנהגן</h4>
+                    </div>
+                    <div class="weather-content">
+                        <div class="weather-loading">טוען נתוני מזג אוויר...</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-day">
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">07:30–08:30</div>
+                            <div class="activity">ארוחת בוקר במלון</div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">08:30–09:00</div>
+                            <div class="activity">יציאה מהמלון ונסיעה ל־<a href="#" class="speaker-link" onclick="openSpeakerPopup('bloxhub')">BLOXHUB</a></div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">09:00–11:00</div>
+                            <div class="activity">
+                                <div class="activity-header">
+                                    <strong><a href="#" class="speaker-link" onclick="openSpeakerPopup('dac')"></a>Danish Architecture Center (DAC) – המרכז הדני לאדריכלות</a></strong>
+                                </div>
+                                <div class="activity-content">
+                                    תיחה וביקור בתערוכה SO DANISH עם Head of Exhibitions <a href="#" class="speaker-link" onclick="openSpeakerPopup('kasper-riisholt')">Kasper Riisholt</a> של DAC<br>
+                                    מבוא לתפיסת המנהיגות אורבנית אסטרטגית של ה-DAC עם Senior Project Manager <a href="#" class="speaker-link" onclick="openSpeakerPopup('bjarne-jensen')">Bjarne E. Jensen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">11:00–11:30</div>
+                            <div class="activity">הפסקה</div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">11:30–13:30</div>
+                            <div class="activity"><a href="#" class="speaker-link" onclick="openSpeakerPopup('nordhavn-tour')">סיור בנורהאבן (Nordhavn)</a></div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">13:30–14:30</div>
+                            <div class="activity">ארוחת צהריים</div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">14:30–16:00</div>
+                            <div class="activity">המרכז לתכנון עתידני – פתרונות אורבניים, טכנולוגיה וקיימות- 
+עם <a href="#" class="speaker-link" onclick="openSpeakerPopup('carsten-beck')">Carsten Beck</a>, מנהל המרכז לתכנון עתידני של קופנהגן- באולם CodeNode</div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">16:00–17:00</div>
+                            <div class="activity">עיבוד יום- באולם CodeNode</div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">17:00–22:00</div>
+                            <div class="activity">זמן חופשי</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                כל הזכויות שמורות לארגון מעוז &copy; 2025
+            </div>
+            <div class="footer-section">
+                האתר נבנה ע"י Dor Aloni Sinai
+            </div>
+            <div class="footer-section">
+                <a href="privacy.html">מדיניות פרטיות</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- חלון קופץ למידע על דוברים -->
+    <div id="speakerPopup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeSpeakerPopup()">&times;</button>
+            <div class="speaker-image">
+                <img id="speakerImage" src="" alt="">
+            </div>
+            <div class="speaker-info">
+                <h3 id="speakerName"></h3>
+                <h4 id="speakerTitle"></h4>
+                <div id="speakerBio"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // תפריט המבורגר
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+                
+                // סגירת התפריט בלחיצה על קישור
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+                
+                // סגירת התפריט בלחיצה מחוץ לו
+                document.addEventListener('click', function(event) {
+                    if (!navMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+        
+        // מאגר נתונים על דוברים
+        const speakersData = {
+            'dac': {
+                name: 'Danish Architecture Center (DAC)',
+                title: 'המרכז הדני לאדריכלות',
+                image: 'image/speakers/DAC.jpg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">Danish Architecture Center (DAC) – המרכז הדני לאדריכלות</h4>
+                        <p>ה־DAC הוא אחד הגופים המובילים בעולם לקידום אדריכלות חדשנית, עיצוב עירוני וחשיבה מערכתית על עתיד הערים. המרכז משמש חממה לחדשנות במרחב הבנוי וזירה בינלאומית למפגשים בין אדריכלים, יזמים, רשויות מקומיות ומקבלי החלטות.</p>
+                        <p>פעילותו מתמקדת בפיתוח פתרונות שמחברים בין קיימות, טכנולוגיה ואיכות חיים במרחב העירוני. המרכז מקדם תערוכות, מחקרים ותכניות חינוכיות שמטרתן לעצב עתיד עירוני המבוסס על אחריות סביבתית, שוויון חברתי ואמון בין אדם למרחב.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">תערוכה SO DANISH</h4>
+                        <p>במהלך הביקור נשתתף בתערוכה SO DANISH שמציגה את הייחודיות של העיצוב והאדריכלות הדנית ואת השפעתם על חיי היומיום והתרבות.</p>
+                        <p><a href="https://dac.dk/en/exhibitions/so-danish" target="_blank" style="color: #D1B194; text-decoration: underline;">קישור לתערוכה SO DANISH</a></p>
+                    </div>
+                `
+            },
+            'kasper-riisholt': {
+                name: 'Kasper Riisholt',
+                title: 'ראש תחום התערוכות (Head of Exhibitions) ב-Danish Architecture Center (DAC)',
+                image: 'image/speakers/Kasper Riisholt.jpg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">Danish Architecture Center (DAC) – המרכז הדני לאדריכלות</h4>
+                        <p>ביקור בתערוכה SO DANISH עם Kasper Riisholt, ראש תחום התערוכות (Head of Exhibitions)</p>
+                        <p>ה־DAC הוא אחד הגופים המובילים בעולם לקידום אדריכלות חדשנית, עיצוב עירוני וחשיבה מערכתית על עתיד הערים. המרכז משמש חממה לחדשנות במרחב הבנוי וזירה בינלאומית למפגשים בין אדריכלים, יזמים, רשויות מקומיות ומקבלי החלטות.</p>
+                        <p>פעילותו מתמקדת בפיתוח פתרונות המחברים בין קיימות, טכנולוגיה ואיכות חיים במרחב העירוני. המרכז מקדם תערוכות, מחקרים ותכניות חינוכיות שמטרתן לעצב עתיד עירוני המבוסס על אחריות סביבתית, שוויון חברתי ואמון בין אדם למרחב.</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">Kasper Riisholt</h4>
+                        <p>Kasper Riisholt, ראש תחום התערוכות ב־DAC, אחראי על פיתוח תערוכות חדשניות המשלבות עיצוב, חוויה וחשיבה ביקורתית על האדריכלות הדנית והבינלאומית. הוא מתמקד בהנגשת רעיונות של קיימות, תרבות בנייה וזהות עירונית לקהל רחב, ובקידום שיח ציבורי על תפקיד האדריכלות בעיצוב חיי היומיום.</p>
+                        <p>במהלך הביקור נשתתף בתערוכה SO DANISH, המציגה את הייחודיות של העיצוב והאדריכלות הדנית ואת השפעתם על חיי היומיום, התרבות והזהות הלאומית.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">קישור לתערוכה</h4>
+                        <p><a href="https://dac.dk/en/exhibitions/so-danish" target="_blank" style="color: #D1B194; text-decoration: underline;">https://dac.dk/en/exhibitions/so-danish</a></p>
+                    </div>
+                `
+            },
+            'bjarne-jensen': {
+                name: 'Bjarne E. Jensen',
+                title: 'Senior Project Manager ב-DAC',
+                image: 'image/speakers/Bjarne E. Jensen.jpeg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">Bjarne E. Jensen – Senior Project Manager ב-DAC</h4>
+                        <p>Bjarne E. Jensen, מנהל פרויקטים בכיר ב־DAC, יציג למשתתפים את תפיסת המנהיגות האורבנית האסטרטגית של המרכז – גישה הרואה באדריכלות ובתכנון העירוני מנוע לבניית אמון, זהות ושגשוג קהילתי.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">תפיסת המנהיגות האורבנית</h4>
+                        <p>תחת הנחייתו של Jensen, המשתתפים יכירו את הגישה האסטרטגית של DAC לפיתוח עירוני המבוססת על שותפויות, חדשנות וחזון ארוך טווח. הגישה מדגישה כיצד תכנון נכון יכול לחזק את הקשר בין אזרחים למרחב ולבנות אמון קהילתי.</p>
+                    </div>
+                `
+            },
+            'bloxhub': {
+                name: 'BLOXHUB',
+                title: 'קהילה לחיים עירוניים בני קיימא',
+                image: 'image/speakers/BLOXHUB.jpeg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">BLOXHUB – קהילה לחיים עירוניים בני קיימא</h4>
+                        <p>BLOXHUB הוא מרכז חדשנות קופנהגני המחבר בין אנשי תעשייה, חוקרים, יזמים ורשויות מקומיות לקידום פתרונות לעתיד עירוני בר־קיימא.</p>
+                        <p>המרכז פועל כמרחב עבודה, רשת מקצועית וחממה לשיתופי פעולה בינלאומיים בתחומי תכנון עירוני, בנייה ירוקה וחדשנות חברתית.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">משימה ותפקיד</h4>
+                        <p>BLOXHUB משמש כפלטפורמה לחיבור בין ידע, טכנולוגיה ויזמות לצורך פיתוח פתרונות חדשניים לאתגרי העיר המודרנית. המרכז מעודד שיתופי פעולה רב-תחומיים ומסייע בהפיכת רעיונות לפרויקטים מעשיים המשפיעים על איכות החיים העירונית.</p>
+                    </div>
+                `
+            },
+            'carsten-beck': {
+                name: 'Carsten Beck',
+                title: 'מנהל המרכז לתכנון עתידני של קופנהגן',
+                image: 'image/speakers/Carsten Beck.jpg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">המרכז לתכנון עתידני – Copenhagen Institute for Futures Studies</h4>
+                        <p>CIFS הוא מרכז מחקר עצמאי הפועל מאז 1969 ומוביל חשיבה מערכתית על מגמות עתידיות והשפעתן על מדיניות, תכנון וחדשנות.</p>
+                        <p>המרכז עוסק בפיתוח כלים לתכנון ארוך טווח, ניתוח סיכונים והזדמנויות, ויצירת שפה משותפת בין מגזרים סביב עתיד בר-קיימא.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">Carsten Beck</h4>
+                        <p>Carsten Beck, מנהל תחום חקר עתידים ויחסים ציבוריים במרכז, עוסק בזיהוי מגמות כלכליות, חברתיות וטכנולוגיות ובהפיכתן לתובנות פעולה עבור ממשלות, ערים וארגונים.</p>
+                        <p><a href="https://www.cifs.dk/" target="_blank" style="color: #D1B194; text-decoration: underline;">אתר המרכז לתכנון עתידני</a></p>
+                    </div>
+                `
+            },
+            'nordhavn-tour': {
+                name: 'סיור בנורהאבן (Nordhavn)',
+                title: 'קופנהגן',
+                image: 'image/speakers/Nordhavn.jpg',
+                bio: `
+                    <div style="margin-bottom: 15px; text-align: center;">
+                        <img src="image/speakers/Nordhavn.jpg" alt="נורהאבן (Nordhavn)" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">סיור בנורהאבן (Nordhavn) – קופנהגן</h4>
+                        <p>נורהאבן (Nordhavn) הוא אחד מפרויקטי הפיתוח העירוני הגדולים והשאפתניים באירופה, ומוקד מרכזי לעירוניות הדנית החדשה. האזור, שבעבר שימש כנמל תעשייתי, מתחדש בהדרגה לרובע עירוני מודרני המתוכנן להכיל כ־40,000 תושבים ולספק מספר דומה של מקומות עבודה.</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">עקרונות התכנון</h4>
+                        <p>הרובע מתוכנן סביב עקרונות של קיימות, עיר קומפקטית ו"עיר של 5 דקות" – שילוב צפיפות עירונית עם איכות חיים גבוהה, נגישות, תחבורה ירוקה ותכנון המותאם לשינויי אקלים.</p>
+                        <p>תעלות המים, המטרו, שטחי הציבור הפתוחים והפרויקטים האדריכליים הייחודיים – כמו The Silo – יוצרים יחד מרקם עירוני חדשני שמדגים כיצד תשתיות פיזיות יכולות לבנות אמון בין אזרחים, ממשל ויזמים.</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">הסיור</h4>
+                        <p>הסיור בהובלת Nordic Path מציע מבט מקצועי על תהליך ההתחדשות של נורהאבן, תוך חיבור לנושא המסע – תשתיות בונות אמון.</p>
+                        <p>נבחן כיצד תכנון עירוני, מדיניות ציבורית ועיצוב סביבתי משתלבים ליצירת מרחב עירוני בר־קיימא, משתף ואנושי.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">מידע נוסף</h4>
+                        <p><strong>למידע נוסף על הסיור:</strong></p>
+                        <p><a href="http://www.nordicpath.dk/" target="_blank" style="color: #D1B194; text-decoration: underline;">www.nordicpath.dk</a></p>
+                    </div>
+                `
+            }
+        };
+        
+        // פתיחת חלון קופץ לדובר
+        function openSpeakerPopup(speakerId) {
+            const speaker = speakersData[speakerId];
+            if (!speaker) return;
+            
+            document.getElementById('speakerImage').src = speaker.image;
+            document.getElementById('speakerImage').alt = speaker.name;
+            document.getElementById('speakerName').textContent = speaker.name;
+            document.getElementById('speakerTitle').textContent = speaker.title;
+            document.getElementById('speakerBio').innerHTML = speaker.bio;
+            
+            document.getElementById('speakerPopup').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // סגירת חלון קופץ
+        function closeSpeakerPopup() {
+            document.getElementById('speakerPopup').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // סגירה בלחיצה על הרקע
+        document.getElementById('speakerPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSpeakerPopup();
+            }
+        });
+        
+        // Weather functionality
+        loadWeather();
+        
+        async function loadWeather() {
+            const weatherWidget = document.getElementById('weather-widget');
+            const weatherContent = weatherWidget.querySelector('.weather-content');
+            
+            try {
+                // Using wttr.in service for weather data
+                const response = await fetch('https://wttr.in/Copenhagen?format=j1');
+                const data = await response.json();
+                
+                const current = data.current_condition[0];
+                const temp = Math.round(current.temp_C);
+                const description = getWeatherDescription(current.weatherCode);
+                const humidity = current.humidity;
+                const windSpeed = current.windspeedKmph;
+                const icon = getWeatherIcon(current.weatherCode);
+                
+                weatherContent.innerHTML = `
+                    <div class="weather-temp">${temp}°C</div>
+                    <div class="weather-description">${description}</div>
+                    <div class="weather-details">
+                        <div class="weather-detail">
+                            <i class="fas fa-tint"></i>
+                            <span>${humidity}% לחות</span>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fas fa-wind"></i>
+                            <span>${windSpeed} קמ"ש רוח</span>
+                        </div>
+                    </div>
+                `;
+                
+                // Update weather icon
+                const weatherIcon = weatherWidget.querySelector('.weather-icon');
+                weatherIcon.className = `${icon} weather-icon`;
+                
+            } catch (error) {
+                console.error('Error loading weather:', error);
+                weatherContent.innerHTML = `
+                    <div class="weather-offline">
+                        <div class="weather-temp">6°C</div>
+                        <div class="weather-description">מזג אוויר אופייני לנובמבר</div>
+                        <div class="weather-details">
+                            <div class="weather-detail">
+                                <i class="fas fa-tint"></i>
+                                <span>82% לחות</span>
+                            </div>
+                            <div class="weather-detail">
+                                <i class="fas fa-wind"></i>
+                                <span>20 קמ"ש רוח</span>
+                            </div>
+                        </div>
+                        <div class="weather-note">*נתונים אופליין - מזג אוויר טיפוסי לקופנהגן בנובמבר</div>
+                    </div>
+                `;
+                const weatherIcon = weatherWidget.querySelector('.weather-icon');
+                weatherIcon.className = 'fas fa-cloud weather-icon';
+                weatherWidget.classList.add('weather-error');
+            }
+        }
+        
+        function getWeatherDescription(code) {
+            const weatherCodes = {
+                '113': 'שמש בהירה',
+                '116': 'חלקית מעונן',
+                '119': 'מעונן',
+                '122': 'מעונן כבד',
+                '143': 'ערפל',
+                '176': 'גשם קל',
+                '179': 'שלג קל',
+                '182': 'גשם קפוא',
+                '185': 'גשם קפוא',
+                '200': 'רעם קל',
+                '227': 'שלג',
+                '230': 'סופת שלג',
+                '248': 'ערפל כבד',
+                '260': 'ערפל',
+                '263': 'גשם קל',
+                '266': 'גשם קל',
+                '281': 'גשם קפוא',
+                '284': 'גשם קפוא כבד',
+                '293': 'גשם קל',
+                '296': 'גשם קל',
+                '299': 'גשם בינוני',
+                '302': 'גשם בינוני',
+                '305': 'גשם כבד',
+                '308': 'גשם כבד',
+                '311': 'גשם קפוא קל',
+                '314': 'גשם קפוא בינוני',
+                '317': 'גשם קפוא כבד',
+                '320': 'שלג קל',
+                '323': 'שלג קל',
+                '326': 'שלג בינוני',
+                '329': 'שלג כבד',
+                '332': 'שלג כבד',
+                '335': 'שלג כבד מאוד',
+                '338': 'שלג כבד מאוד',
+                '350': 'ברד קל',
+                '353': 'גשם קל',
+                '356': 'גשם בינוני',
+                '359': 'גשם כבד',
+                '362': 'גשם וברד',
+                '365': 'גשם וברד',
+                '368': 'שלג קל',
+                '371': 'שלג כבד',
+                '374': 'ברד קל',
+                '377': 'ברד',
+                '386': 'רעם קל',
+                '389': 'רעם ובינוני',
+                '392': 'רעם ושלג קל',
+                '395': 'רעם ושלג כבד'
+            };
+            return weatherCodes[code] || 'מזג אוויר לא ידוע';
+        }
+        
+        function getWeatherIcon(code) {
+            if (['113'].includes(code)) return 'fas fa-sun';
+            if (['116', '119'].includes(code)) return 'fas fa-cloud-sun';
+            if (['122'].includes(code)) return 'fas fa-cloud';
+            if (['143', '248', '260'].includes(code)) return 'fas fa-smog';
+            if (['176', '263', '266', '293', '296', '299', '302', '305', '308', '353', '356', '359'].includes(code)) return 'fas fa-cloud-rain';
+            if (['179', '227', '230', '320', '323', '326', '329', '332', '335', '338', '368', '371'].includes(code)) return 'fas fa-snowflake';
+            if (['200', '386', '389'].includes(code)) return 'fas fa-bolt';
+            if (['350', '374', '377'].includes(code)) return 'fas fa-cloud-hail';
+            return 'fas fa-cloud-sun';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "משלחת דנמרק - מאני טיים",
+  "short_name": "משלחת דנמרק",
+  "description": "אתר משלחת דנמרק - מידע, לוחות זמנים וחומרי למידה",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#4A8A93",
+  "theme_color": "#4A8A93",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "image/מאני טיים- לוגו-דנמרק.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "he",
+  "dir": "rtl"
+}
