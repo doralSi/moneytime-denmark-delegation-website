@@ -1,6 +1,6 @@
 // ===== PWA Service Worker (iOS-friendly) =====
-// גרסה: v6 — הקפד להגדיל בגרסה חדשה אחרי כל שינוי כדי לאלץ ריענון
-const CACHE = 'pwa-cache-v6';
+// גרסה: v7 — הקפד להגדיל בגרסה חדשה אחרי כל שינוי כדי לאלץ ריענון
+const CACHE = 'pwa-cache-v7';
 
 // ===== Precache ל"שלד" בלבד (דפים קלים שחייבים לעבוד מיד) =====
 const PRECACHE_URLS = [
