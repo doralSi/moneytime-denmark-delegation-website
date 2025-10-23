@@ -1,5 +1,5 @@
 
-const CACHE = 'pwa-cache-v3';
+const CACHE = 'pwa-cache-v4';
 
 const PRECACHE_URLS = [
   "./index.html",

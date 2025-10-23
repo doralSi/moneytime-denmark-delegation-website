@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>בדיקת אייקונים</title>
     <link rel="stylesheet" href="fontawesome/fontawesome-free-6.4.0-web/css/all.min.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4A8A93">
+    
+    <!-- Apple-specific meta tags for PWA support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="משלחת דנמרק">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    
     <style>
         body { direction: rtl; padding: 50px; }
         .test-icon {
@@ -40,5 +51,14 @@
     </div>
     
     <p>אם האייקונים קטנים ומרוכזים - הבעיה היא שאתה פותח את הקובץ הלא נכון.</p>
+
+    <script>
+        // Service Worker Registration for PWA offline support
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js').catch(console.error);
+            });
+        }
+    </script>
 </body>
 </html>
