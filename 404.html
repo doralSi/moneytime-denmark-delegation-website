@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עמוד לא נמצא - משלחת דנמרק</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4A8A93;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #4A8A93;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .btn:hover {
+            background: #3a6b73;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>עמוד לא נמצא</h1>
+        <p>נראה שהעמוד שחיפשת לא קיים או שהקישור שגוי.</p>
+        <a href="index.html" class="btn">חזרה לדף הבית</a>
+        <a href="schedule.html" class="btn">לוח זמנים</a>
+        <a href="learning.html" class="btn">למידה מקדימה</a>
+        <a href="technical.html" class="btn">מידע טכני</a>
+    </div>
+
+    <script>
+        // נסה לנחש איזה עמוד המשתמש חיפש לפי ה-URL
+        const path = window.location.pathname;
+        const possiblePages = [
+            'schedule.html',
+            'learning.html', 
+            'technical.html',
+            'privacy.html',
+            'schedule-day1.html',
+            'schedule-day2.html',
+            'schedule-day3.html',
+            'schedule-day4.html',
+            'schedule-day5.html'
+        ];
+        
+        // אם זה עמוד קיים, נסה להפנות אליו
+        for (let page of possiblePages) {
+            if (path.includes(page.replace('.html', ''))) {
+                console.log('Redirecting to:', page);
+                window.location.href = page;
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
