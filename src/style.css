@@ -146,7 +146,7 @@ header {
     margin: 0;
     display: flex;
     gap: 1em;
-    font-size: 1.3em;
+    font-size: 1.5em;
     flex-wrap: nowrap;
     white-space: nowrap;
 }
@@ -831,6 +831,7 @@ footer {
         border-radius: 0;
         width: 100%;
         box-sizing: border-box;
+        font-size: 1.3em; /* גדלת פונט במובייל */
     }
     
     .nav-container {
@@ -856,7 +857,7 @@ footer {
     }
     
     .main-title {
-        font-size: 3.5em;
+        font-size: 4.2em;
     }
     
     .sub-title {
@@ -864,7 +865,7 @@ footer {
     }
     
     .hero-date {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
     
     /* אזור הוידאו במובייל */
@@ -931,7 +932,7 @@ footer {
     }
     
     #about-section .section-text {
-        font-size: 1em;
+        font-size: 1.4em;
         line-height: 1.2;
         text-align: center !important;
         margin: 0 auto;
@@ -974,7 +975,7 @@ footer {
     }
     
     #goals-section .section-text {
-        font-size: 1.1em !important;
+        font-size: 1.4em !important;
     }
     
     /* חלק לוח הזמנים במובייל */
@@ -989,11 +990,11 @@ footer {
     }
     
     #schedule-section .section-title {
-        font-size: 2.2em !important;
+        font-size: 2.4em !important;
     }
     
     #schedule-section .section-text {
-        font-size: 1.2em !important;
+        font-size: 1.5em !important;
     }
     
     #schedule-section .circle-button {
@@ -1014,17 +1015,17 @@ footer {
     }
     
     #learning-section .section-title {
-        font-size: 2.2em !important;
+        font-size: 2.3em !important;
     }
     
     #learning-section .section-text {
-        font-size: 1.2em !important;
+        font-size: 1.5em !important;
     }
     
     #learning-section .circle-button {
         width: 140px !important;
         height: 140px !important;
-        font-size: 1.3em !important;
+        font-size: 1.5em !important;
     }
     
     /* חלק פרטים טכניים במובייל */
@@ -1044,13 +1045,13 @@ footer {
     }
     
     #technical-section .section-text {
-        font-size: 1.2em !important;
+        font-size: 1.5em !important;
     }
     
     #technical-section .circle-button {
         width: 140px !important;
         height: 140px !important;
-        font-size: 1.3em !important;
+        font-size: 1.5em !important;
     }
     
     #technical-section .icons-row {
@@ -1080,7 +1081,7 @@ footer {
     #map-section .circle-button {
         width: 140px !important;
         height: 140px !important;
-        font-size: 1.3em !important;
+        font-size: 1.5em !important;
     }
     
     #about-section .section-text {
@@ -1093,11 +1094,11 @@ footer {
     }
     
     .section-text {
-        font-size: 1.1em !important;
+        font-size: 1.5em !important;
     }
     
     .section-link {
-        font-size: 1em !important;
+        font-size: 1.5em !important;
         padding: 0.7em 1.8em;
     }
 }
@@ -1354,7 +1355,7 @@ footer {
     }
     
     .card-title {
-        font-size: 1.6em; /* הגדלה נוספת למובילים בינוניים */
+        font-size: 1.8em; /* הגדלה נוספת למובילים בינוניים */
         padding: 0.35em 1.1em;
     }
     
@@ -1724,7 +1725,7 @@ footer {
     }
     
     .schedule-title h2 {
-        font-size: 2.4em; /* הגדלה למובייל */
+        font-size: 2.5em; /* הגדלה למובייל */
     }
     
     .schedule-icon {
@@ -1747,7 +1748,7 @@ footer {
     }
     
     .day-topic h3 {
-        font-size: 1.8em; /* הגדלה למובייל */
+        font-size: 1.9em; /* הגדלה למובייל */
     }
     
     .schedule-item {
@@ -1756,30 +1757,30 @@ footer {
     }
     
     .time {
-        font-size: 1.6em; /* הגדלה למובייל */
+        font-size: 1.7em; /* הגדלה למובייל */
     }
     
     .activity {
-        font-size: 1.5em; /* הגדלה נוספת למובייל */
+        font-size: 1.7em; /* הגדלה נוספת למובייל */
     }
     
     .weather-title {
-        font-size: 1.2em; /* התאמה למובייל */
+        font-size: 1.5em; /* התאמה למובייל */
     }
     
     .weather-description {
-        font-size: 1.15em; /* התאמה למובייל */
+        font-size: 1.3em; /* התאמה למובייל */
     }
     
     .weather-details {
-        font-size: 1em; /* התאמה למובייל */
+        font-size: 1.2em; /* התאמה למובייל */
     }
 }
 
 /* התאמה למובילים בינוניים */
 @media (max-width: 600px) and (min-width: 481px) {
     .activity {
-        font-size: 1.45em; /* הגדלה למובילים בינוניים */
+        font-size: 1.5em; /* הגדלה למובילים בינוניים */
     }
 }
 
@@ -1789,7 +1790,7 @@ footer {
     }
     
     .schedule-title h2 {
-        font-size: 2em; /* הגדלה למובילים קטנים */
+        font-size: 2.2em; /* הגדלה למובילים קטנים */
     }
     
     .schedule-icon {
@@ -1807,19 +1808,19 @@ footer {
     }
     
     .day-topic h3 {
-        font-size: 1.6em; /* הגדלה למובילים קטנים */
+        font-size: 1.8em; /* הגדלה למובילים קטנים */
     }
     
     .time {
-        font-size: 1.5em; /* הגדלה למובילים קטנים */
+        font-size: 1.7em; /* הגדלה למובילים קטנים */
     }
     
     .activity {
-        font-size: 1.4em; /* הגדלה נוספת למובילים קטנים */
+        font-size: 1.7em; /* הגדלה נוספת למובילים קטנים */
     }
     
     .weather-title {
-        font-size: 1.1em; /* התאמה למובילים קטנים */
+        font-size: 1.3em; /* התאמה למובילים קטנים */
     }
     
     .weather-temp {
@@ -1827,11 +1828,11 @@ footer {
     }
     
     .weather-description {
-        font-size: 1em; /* התאמה למובילים קטנים */
+        font-size: 1.3em; /* התאמה למובילים קטנים */
     }
     
     .weather-details {
-        font-size: 0.95em; /* התאמה למובילים קטנים */
+        font-size: 1.2em; /* התאמה למובילים קטנים */
     }
     
     /* התאמות לדף הטכני למובילים קטנים */
@@ -1870,7 +1871,7 @@ footer {
     }
     
     .card-content {
-        font-size: 1.3em; /* הגדלה משמעותית למובילים קטנים */
+        font-size: 1.4em; /* הגדלה משמעותית למובילים קטנים */
         line-height: 1.4;
     }
     
@@ -1976,14 +1977,14 @@ footer {
 }
 
 .speaker-info h3 {
-    font-size: 1.8em;
+    font-size: 2.0em;
     color: #024B53;
     margin: 0 0 10px 0;
     font-weight: 700;
 }
 
 .speaker-info h4 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #666;
     margin: 0 0 20px 0;
     font-weight: 500;
@@ -1994,11 +1995,12 @@ footer {
     text-align: right;
     line-height: 1.6;
     color: #444;
+    font-size: 1.2em;
 }
 
 .speaker-info p {
     margin-bottom: 15px;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 /* רספונסיביות לחלון קופץ */
@@ -2023,11 +2025,11 @@ footer {
     }
     
     .speaker-info h3 {
-        font-size: 1.5em;
+        font-size: 2.2em;
     }
     
     .speaker-info h4 {
-        font-size: 1.1em;
+        font-size: 1.5em;
     }
     
     .popup-close {
