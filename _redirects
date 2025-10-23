@@ -1,0 +1,18 @@
+# Redirect all non-file requests to index.html for SPA
+/*    /index.html   200
+
+# Ensure specific files are served correctly
+/manifest.json    /manifest.json    200
+/sw.js    /sw.js    200
+/*.html    /:splat    200
+/*.css    /:splat    200
+/*.js     /:splat    200
+/*.png    /:splat    200
+/*.jpg    /:splat    200
+/*.jpeg   /:splat    200
+/*.gif    /:splat    200
+/*.svg    /:splat    200
+/*.ico    /:splat    200
+/*.webp   /:splat    200
+/*.avif   /:splat    200
+/*.mp4    /:splat    200
