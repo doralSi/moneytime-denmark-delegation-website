@@ -1,10 +1,26 @@
 
-const CACHE = 'pwa-cache-v2';
+const CACHE = 'pwa-cache-v3';
 
 const PRECACHE_URLS = [
   "./index.html",
   "./manifest.json",
   "./offline.html",
+  "./learning.html",
+  "./schedule.html",
+  "./schedule-day1.html",
+  "./schedule-day2.html",
+  "./schedule-day3.html",
+  "./schedule-day4.html",
+  "./schedule-day5.html",
+  "./technical.html",
+  "./privacy.html",
+  "./recommendations.html",
+  "./src/style.css",
+  "./src/style_organized.css",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/apple-touch-icon.png",
+  "./image/מאני טיים- לוגו-דנמרק.png",
   "./fontawesome/fontawesome-free-6.4.0-web/LICENSE.txt",
   "./fontawesome/fontawesome-free-6.4.0-web/css/all.css",
   "./fontawesome/fontawesome-free-6.4.0-web/css/all.min.css",
@@ -2215,14 +2231,33 @@ const PRECACHE_URLS = [
 ];
 
 self.addEventListener('install', event => {
+  // Skip waiting to activate immediately
+  self.skipWaiting();
+  
   event.waitUntil(
-    caches.open(CACHE).then(cache => cache.addAll(PRECACHE_URLS))
+    caches.open(CACHE).then(cache => {
+      console.log('Service Worker: Pre-caching files');
+      return cache.addAll(PRECACHE_URLS);
+    }).catch(error => {
+      console.error('Service Worker: Pre-caching failed:', error);
+    })
   );
 });
 
 self.addEventListener('activate', event => {
+  // Take control of all pages immediately
   event.waitUntil(
-    caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+    Promise.all([
+      // Clean up old caches
+      caches.keys().then(keys => 
+        Promise.all(keys.filter(k => k !== CACHE).map(k => {
+          console.log('Service Worker: Deleting old cache:', k);
+          return caches.delete(k);
+        }))
+      ),
+      // Take control immediately
+      self.clients.claim()
+    ])
   );
 });
 
