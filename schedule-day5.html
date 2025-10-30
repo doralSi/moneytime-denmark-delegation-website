@@ -108,7 +108,7 @@
                     <div class="schedule-item">
                         <div class="time-activity">
                             <div class="time">12:00–13:00</div>
-                            <div class="activity">מפגש עם שגריר ישראל בדנמרק- צבי טל</div>
+                            <div class="activity">מפגש עם שגריר ישראל בדנמרק- <a href="#" class="speaker-link" onclick="openSpeakerPopup('zvital')">צבי טל</a></div>
                         </div>
                     </div>
                     
@@ -165,35 +165,20 @@
         </div>
     </main>
     
-    <!-- Ambassador Profile Section -->
-    <section style="max-width: 1200px; margin: 40px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-        <h2 style="text-align: center; color: #1a237e; margin-bottom: 30px; font-size: 2rem;">שגריר ישראל בדנמרק</h2>
-        <div style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
-            <div style="flex: 0 0 250px;">
-                <img src="image/speakers/zvital.jpg" alt="צבי טל" loading="lazy" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+    <!-- Speaker Popup -->
+    <div id="speakerPopup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeSpeakerPopup()">&times;</button>
+            <div class="speaker-image">
+                <img id="speakerImage" src="" alt="" loading="lazy">
             </div>
-            <div style="flex: 1; min-width: 300px;">
-                <h3 style="color: #1a237e; margin-bottom: 15px; font-size: 1.8rem;">צבי טל</h3>
-                <p style="line-height: 1.8; margin-bottom: 15px; text-align: right;">
-                    <strong>שגריר ישראל בדנמרק – צבי טל</strong><br><br>
-                    נולד בירושלים בשנת 1959. נשוי ואב לארבעה ילדים.<br><br>
-                    <strong>השכלה אקדמית:</strong><br>
-                    תואר ראשון במדעי המדינה ובמינהל עסקים – האוניברסיטה העברית בירושלים<br>
-                    תואר שני במדעי המדינה – האוניברסיטה העברית בירושלים<br><br>
-                    השגריר בקיא בעברית, אנגלית, סלובנית וסרבו-קרואטית.<br><br>
-                    השגריר טל שימש בתפקידים שונים במשרד החוץ החל משנת 1984, בהם:<br><br>
-                    🔹 ממלא מקום ראש מטה המשרד (2021-2024)<br>
-                    🔹 יועץ כלכלי בשגרירות בסלובניה (2018-2021)<br>
-                    🔹 סמנכ"ל אירופה (2015-2018)<br>
-                    🔹 קצין מטה להערכות מצב (2013-2015)<br>
-                    🔹 יועץ פוליטי בשגרירות בוושינגטון (2009-2013)<br>
-                    🔹 סגן נציב בכיר בלשכת הנציב בניו יורק (2005-2009)<br>
-                    🔹 קצין מטה בלשכת המנכ"ל (2003-2005)<br>
-                    🔹 יועץ פוליטי בשגרירות בקרואטיה (1999-2003)
-                </p>
+            <div class="speaker-info">
+                <h3 id="speakerName"></h3>
+                <h4 id="speakerTitle"></h4>
+                <div id="speakerBio"></div>
             </div>
         </div>
-    </section>
+    </div>
     
     <footer>
         <div class="footer-content">
@@ -210,6 +195,50 @@
     </footer>
     
     <script>
+        // מאגר נתונים על דוברים
+        const speakersData = {
+            'zvital': {
+                name: 'צבי טל',
+                title: 'שגריר ישראל בדנמרק',
+                image: 'image/speakers/zvital.jpg',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <h4 style="color: #D1B194; margin-bottom: 8px;">שגריר ישראל בדנמרק – צבי טל</h4>
+                        <p>שגריר ישראל בדנמרק מאז שנת 2025. דיפלומט בכיר במשרד החוץ, בעל ניסיון של למעלה משלושה עשורים בשירות החוץ הישראלי. בעבר שימש כשגריר ישראל במקסיקו ובבהאמה, וכיהן בתפקידים בכירים בשגרירויות ישראל בבריסל, רומא ופריז.</p>
+                        <p>טל הוא עורך דין ובעל תואר שני במדע המדינה מהאוניברסיטה העברית בירושלים, ודובר עברית, אנגלית, צרפתית וספרדית.</p>
+                    </div>
+                `
+            }
+        };
+        
+        // פתיחת חלון קופץ לדובר
+        function openSpeakerPopup(speakerId) {
+            const speaker = speakersData[speakerId];
+            if (!speaker) return;
+            
+            document.getElementById('speakerImage').src = speaker.image;
+            document.getElementById('speakerImage').alt = speaker.name;
+            document.getElementById('speakerName').textContent = speaker.name;
+            document.getElementById('speakerTitle').textContent = speaker.title;
+            document.getElementById('speakerBio').innerHTML = speaker.bio;
+            
+            document.getElementById('speakerPopup').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // סגירת חלון קופץ
+        function closeSpeakerPopup() {
+            document.getElementById('speakerPopup').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // סגירה בלחיצה על הרקע
+        document.getElementById('speakerPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSpeakerPopup();
+            }
+        });
+        
         // תפריט המבורגר
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
