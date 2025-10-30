@@ -115,35 +115,42 @@
                     <div class="schedule-item">
                         <div class="time-activity">
                             <div class="time">15:00</div>
-                            <div class="activity">נסיעה למלון</div>
+                            <div class="activity">נסיעה ל- CopenHill</div>
                         </div>
                     </div>
                     
                     <div class="schedule-item">
                         <div class="time-activity">
                             <div class="time">15:30</div>
-                            <div class="activity">אחסון מזוודות במלון וארוחת צהריים קלה</div>
+                            <div class="activity">פתיחה למסע בתצפית <a href="#" class="speaker-link" onclick="openSpeakerPopup('copenhill')">CopenHill</a></div>
                         </div>
                     </div>
                     
                     <div class="schedule-item">
                         <div class="time-activity">
-                            <div class="time">16:30</div>
-                            <div class="activity">פתיחה למסע והתמקמות בקופנהגן – סיור בנמל Nordhavnen</div>
+                            <div class="time">16:20</div>
+                            <div class="activity">נסיעה למלון</div>
                         </div>
                     </div>
                     
                     <div class="schedule-item">
                         <div class="time-activity">
-                            <div class="time">17:30</div>
+                            <div class="time">16:40</div>
+                            <div class="activity">צ'ק אין והתארגנות במלון Fairfield by Marriott Copenhagen Nordhavn</div>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-activity">
+                            <div class="time">18:00</div>
                             <div class="activity">מפגש פתיחה רשמי של המסע- באולם CodeNode</div>
                         </div>
                     </div>
                     
                     <div class="schedule-item">
                         <div class="time-activity">
-                            <div class="time">19:00–20:30</div>
-                            <div class="activity">צ'ק-אין במלון Fairfield by Marriott Copenhagen Nordhavn וארוחת ערב משותפת</div>
+                            <div class="time">19:00–20:00</div>
+                            <div class="activity">ארוחת ערב</div>
                         </div>
                     </div>
                 </div>
@@ -165,7 +172,99 @@
         </div>
     </footer>
 
+    <!-- חלון קופץ למידע על דוברים ומקומות -->
+    <div id="speakerPopup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeSpeakerPopup()">&times;</button>
+            <div class="speaker-image">
+                <img id="speakerImage" src="" alt="" loading="lazy">
+            </div>
+            <div class="speaker-info">
+                <h3 id="speakerName"></h3>
+                <h4 id="speakerTitle"></h4>
+                <div id="speakerBio"></div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // תפריט המבורגר
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+                
+                // סגירת התפריט בלחיצה על קישור
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+                
+                // סגירת התפריט בלחיצה מחוץ לו
+                document.addEventListener('click', function(event) {
+                    if (!navMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                        mobileMenuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+
+        // מאגר נתונים על מקומות ודוברים
+        const speakersData = {
+            'copenhill': {
+                name: 'CopenHill',
+                title: 'תשתית עירונית יוצאת דופן',
+                image: 'image/speakers/copenhill.png',
+                bio: `
+                    <div style="margin-bottom: 15px;">
+                        <p><strong>CopenHill</strong> הוא אחד הסמלים הבולטים של קופנהגן – מתקן רב־שימושי המשלב תחנת אנרגיה מתקדמת עם גג ירוק הכולל מסלול סקי, קיר טיפוס ושטחי פנאי.</p>
+                        <p>המבנה, שתוכנן בידי משרד האדריכלים <strong>BIG – Bjarke Ingels Group</strong>, מגלם את תפיסת <strong>"תשתיות בונות אמון"</strong>: שילוב בין קיימות, טכנולוגיה וקהילתיות, והפיכת תשתית הנדסית קלאסית למרחב חיים קהילתי ופתוח לציבור.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #024B53; margin-bottom: 8px;">נקודת הפתיחה של המסע</h4>
+                        <p>זהו המקום שבו נפתח את המסע – נקודת פתיחה שמדגימה באופן מוחשי איך תשתיות יכולות לבנות אמון, לחבר בין אנשים וסביבות, ולהחזיר אותנו לרגע פשוט של עמידה יציבה ורגליים על הקרקע, אל מול נוף של עיר שבנתה אמון מתשתיותיה.</p>
+                    </div>
+                `
+            }
+        };
+        
+        // פתיחת חלון קופץ לדובר/מקום
+        function openSpeakerPopup(speakerId) {
+            const speaker = speakersData[speakerId];
+            if (!speaker) return;
+            
+            document.getElementById('speakerImage').src = speaker.image;
+            document.getElementById('speakerImage').alt = speaker.name;
+            document.getElementById('speakerName').textContent = speaker.name;
+            document.getElementById('speakerTitle').textContent = speaker.title;
+            document.getElementById('speakerBio').innerHTML = speaker.bio;
+            
+            document.getElementById('speakerPopup').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // סגירת חלון קופץ
+        function closeSpeakerPopup() {
+            document.getElementById('speakerPopup').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // סגירה בלחיצה על הרקע
+        document.getElementById('speakerPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSpeakerPopup();
+            }
+        });
+        
         // Weather functionality
         document.addEventListener('DOMContentLoaded', function() {
             loadWeather();
